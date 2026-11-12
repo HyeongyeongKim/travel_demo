@@ -1,0 +1,26 @@
+.create-screen { display: flex; flex-direction: column; }
+.create-trip-card { text-decoration: none; }
+.create-trip-card:hover { border-color: var(--blue); background: var(--blue-tint); }
+.create-form { display: flex; flex: 1; flex-direction: column; padding: 32px 20px 0; }
+.create-fields { display: grid; gap: 28px; }
+.trip-field { display: flex; min-width: 0; flex-direction: column; gap: 8px; }
+.trip-field label, .destination-fields legend { color: var(--ink); font-size: 15px; font-weight: 600; }
+.trip-field input { width: 100%; min-width: 0; min-height: 52px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: white; color: var(--ink); font-size: 15px; }
+.trip-field input::placeholder { color: var(--muted); }
+.trip-field input:focus { border-color: var(--blue); outline: 2px solid var(--blue-tint); outline-offset: 1px; }
+.trip-field input[aria-invalid="true"] { border-color: #c0392b; }
+.destination-fields { min-width: 0; margin: 0; padding: 0; border: 0; }
+.destination-fields legend { margin-bottom: 12px; padding: 0; }
+.trip-field .small-field-label { color: var(--muted); font-size: 12px; font-weight: 400; }
+.create-two-columns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+.duration-chip { display: table; margin: 12px 0 0; padding: 6px 12px; border-radius: 999px; background: var(--blue-tint); color: var(--blue); font-size: 13px; font-weight: 600; }
+.create-help { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; word-break: keep-all; }
+.create-bottom { margin-top: auto; padding: 40px 0 max(24px, env(safe-area-inset-bottom)); }
+.create-bottom .create-help { margin-bottom: 12px; }
+.create-bottom .primary-button { min-height: 52px; font-size: 16px; }
+.create-form button:disabled { background: #eef0f4; border-color: var(--line); color: #778198; cursor: not-allowed; transform: none; }
+.create-notice { margin: 0 0 12px; padding: 12px; border-radius: 10px; background: var(--blue-tint); color: var(--ink); font-size: 13px; line-height: 1.6; }
+@media (max-width: 360px) {
+  .create-form { padding-inline: 16px; }
+  .trip-field input { padding-inline: 8px; font-size: 14px; }
+}
